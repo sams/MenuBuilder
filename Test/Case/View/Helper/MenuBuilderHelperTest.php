@@ -10,7 +10,7 @@ class MenuBuilderHelperTest extends CakeTestCase {
  *
  * @return void
  **/
-	public function startTest() {
+	public function setUp() {
 		$menu = array(
 			array(
 				'title' => 'Item 1',
@@ -55,7 +55,7 @@ class MenuBuilderHelperTest extends CakeTestCase {
  *
  * @return void
  **/
-	public function endTest() {
+	public function tearDown() {
 		unset($this->MenuBuilder, $this->view);
 	}
 
