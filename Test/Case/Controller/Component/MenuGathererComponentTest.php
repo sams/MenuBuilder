@@ -81,9 +81,6 @@ class MenuGathererComponentTestCase extends CakeTestCase {
  */
 	public function testControllerMenu() {
 		//$this->MenuGatherer->controllerMenu('main');
-		//$expected = '';
-		//"<code><pre>" . h($result) . '</pre></code>';
-		//$this->assertEquals($expected, $result);
 	}
 
 /**
@@ -94,7 +91,6 @@ class MenuGathererComponentTestCase extends CakeTestCase {
 	public function testGet() {
 		$result = $this->MenuGatherer->get();
 		$expected = array();
-		"<code><pre>" . h($result) . '</pre></code>';
 		$this->assertEquals($expected, $result);
 	}
 
@@ -106,9 +102,7 @@ class MenuGathererComponentTestCase extends CakeTestCase {
 	public function testItem() {
 		$this->MenuGatherer->item('main', array('item1' => array('controller' => 'pages', 'action' => 'display', 'item1')));
 		$result = $this->MenuGatherer->get('main');
-		//$expected = array('main' => array('item1' => array('controller' => 'pages', 'action' => 'display', 'item1')));
 		$expected = array(array('item1' => array('controller' => 'pages', 'action' => 'display', 'item1'))); //?
-		"<code><pre>" . h($result) . '</pre></code>';
 		$this->assertEquals($expected, $result);
 	}
 
@@ -153,7 +147,6 @@ class MenuGathererComponentTestCase extends CakeTestCase {
 				'url' => '/contact',
 			),
 		);
-		"<code><pre>" . h($result) . '</pre></code>';
 		$this->assertEquals($expected, $result);
 	}
 
@@ -166,7 +159,6 @@ class MenuGathererComponentTestCase extends CakeTestCase {
 		$this->MenuGatherer->set(array('item1' => array('controller' => 'pages', 'action' => 'display', 'item1'), 'item1' => array('controller' => 'pages', 'action' => 'display', 'item1')));
 		$expected = $this->MenuGatherer->get();
 		$result = array('item1' => array('controller' => 'pages', 'action' => 'display', 'item1'));
-		"<code><pre>" . h($result) . '</pre></code>';
 		$this->assertEquals($expected, $result);
 	}
 
